@@ -47,3 +47,21 @@
 // // OR
 // let bigInt2 = 1234567890123456789012345678901234567890n; // Using the 'n' suffix
 // 2. Reference Data Types (Non Premitive Data Type): Object, Array, Function (Memory referece is stored, not the value itself, Follow call by reference)
+
+// ## Memories - Two types of memory allocation in JavaScript:
+// 1. Stack Memory: Used for primitive data types (e.g., numbers, strings, booleans). It stores values directly.
+// 2. Heap Memory: Used for reference data types (e.g., objects, arrays, functions). It stores references to the values in memory.
+// // Example of Stack vs Heap Memory:
+// let name1 = "Dileep"; // Stack Memory (Primitive)
+// let anotherName = name1; // Stack Memory (Primitive, copy of value)
+// console.log(anotherName); // Outputs: Dileep
+// anotherName = "DileepSingh"; // Reassigning anotherName does not affect name1 as they are separate copies in stack memory
+// console.log(name1); // Outputs: Dileep - still holds the original value
+// console.log(anotherName); // Outputs: DileepSingh
+
+let person = { name: "Dileep" }; // Heap Memory (Reference)
+let anotherPerson = person; // Heap Memory (Reference, points to the same object in memory)
+console.log(anotherPerson.name); // Outputs: Dileep
+anotherPerson.name = "Dileep Singh"; // Modifying anotherPerson affects person as they reference the same object
+console.log(person.name); // Outputs: Dileep Singh - reflects the change made through anotherPerson
+console.log(anotherPerson.name); // Outputs: Dileep Singh - reflects the change made through anotherPerson
