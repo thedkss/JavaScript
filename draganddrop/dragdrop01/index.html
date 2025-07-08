@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop - Ecample 01</title>
+    <style>
+        body{
+            background : slateblue  
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .whiteBox{
+            background: white;
+            margin: 10px;
+            height: 155px;
+            width: 155px;
+            border: 3px solid black;
+        }
+        .imageBox{
+            position: relative;
+            top: 7px;
+            left: 5px;
+            height: 145px;
+            width: 145px;
+            background-size: 100%;
+            background-repeat:no-repeat;
+            background-image: url('ds-image.jpg');
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+    </style>
+    <script src="dragdrop01.js" defer></script>
+</head>
+<body>
+<div class="container">
+    <div class="whiteBox">
+        <div class="imageBox" draggable="true"></div>
+    </div>
+    <div class="whiteBox"></div>
+    <div class="whiteBox"></div>
+    <div class="whiteBox"></div>
+    <div class="whiteBox"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-01 Change Background Color</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: space-between;
+            /* align-items: center; */
+            /* height: 100vh; */
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            margin: 5px;
+        }
+        #gray{
+            background-color: gray;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #green{
+            background-color: green;
+        }
+        #white{
+            background-color: white;
+        }
+        #pink{
+            background-color: pink;
+        }
+        h2{
+            display: block;
+        }
+    </style>
+</head>
+<body style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 150px;
+">
+    <h2>Choose your Background Color</h2>
+    <div class="container">
+        <div class="box" id="gray"></div>
+        <div class="box" id="yellow"></div>
+        <div class="box" id="green"></div>
+        <div class="box" id="white"></div>
+        <div class="box" id="pink"></div>
+    </div>
+    <h2>Click any one of the Box above to change the Background Color</h2>
+    <script src="project01.js"></script>
+</body>
+</html>

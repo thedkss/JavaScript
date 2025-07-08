@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop - Ecample 02</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{background: rgb(64, 39, 88);}
+        .container{
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .left, .right{
+            min-height: 60vh;
+            width: 30vw;
+            border: dashed white;
+            margin: 20px;
+        }
+        img{
+            height: 3rem;
+            border-radius: 50%;
+            /* margin: 10px; */
+        }
+        .content-flow{
+            display: flex;
+            justify-content: space-between;
+            padding-left: 10px;
+            padding-right: 10px;
+            align-items: center;
+            color: rgb(146, 210, 245);
+            background-color: rgb(53, 31, 73);;
+            border-radius: 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="list content-flow" draggable="true">
+                <img src="ds-image.jpg" alt="" srcset="">
+                <h3>Dileep Kumar Singh</h3>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="list content-flow" draggable="true">
+                <img src="ds-image.jpg" alt="" srcset="">
+                <h3>Rajesh Tiwari</h3>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="list content-flow" draggable="true">
+                <img src="ds-image.jpg" alt="" srcset="">
+                <h3>Sewaram Deshmukh</h3>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="list content-flow" draggable="true">
+                <img src="ds-image.jpg" alt="" srcset="">
+                <h3>Ajay Bajaj</h3>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="right"></div>
+    </div>
+</body>
+<script>
+    let left = document.querySelector('.left')
+    let right = document.querySelector('.right')
+    let lists = document.querySelectorAll('.list')
+
+    lists.forEach(list => {
+        list.addEventListener('dragstart',(e)=>{
+            let selected = e.target
+            right.addEventListener('dragover',(e)=>{
+                e.preventDefault()
+            })
+            right.addEventListener('drop',(e)=>{
+                right.appendChild(selected)
+                selected = null
+            });
+            left.addEventListener('dragover',(e)=>{
+                e.preventDefault()
+            })
+            left.addEventListener('drop',(e)=>{
+                left.appendChild(selected)
+                selected = null
+            })
+        })
+    });
+
+</script>
+</html>

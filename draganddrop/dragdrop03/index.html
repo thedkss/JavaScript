@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop - Ecample 03</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        .container{
+            height: 100vh;
+            background-color: #212121;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+            overflow: hidden;
+            user-select: none;
+            pointer-events: none;
+        }
+        h2, p{
+            user-select: none;
+            pointer-events: none;
+        }
+        .item{
+            height: 3.0rem;
+            background-color: rgb(66, 62, 56);
+            width: 30%;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            align-items: center;
+            margin: 1rem;
+            text-align: left;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="item">
+            <img src="ds-image.jpg" alt="">
+                <div style="line-height: .2; text-indent: 2px;">
+                    <h2>Ajay Bajaj</h2>
+                    <p>The Codder</p>
+                </div>
+            <i class="fa-solid fa-bars"></i>
+        </div> -->
+    </div>
+</body>
+<script src="dragdrop03.js"></script>
+</html>
